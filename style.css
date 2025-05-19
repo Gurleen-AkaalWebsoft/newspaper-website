@@ -95,7 +95,33 @@ background: linear-gradient(0deg, var(--red)0%, var(--red1)50%);
   padding-bottom: 12px;
   color: #333;
 }
+#myTab .nav-link{
+background: var(--grey-red);
+color: rgba(44, 44, 44, 0.738);
+border-radius: 20px 0px;
+}
 
+.accordion{
+  gap: 10px;
+  display:flex;
+  flex-direction: column;
+}
+.accordion-button:not(.collapsed) {
+  background: var(--grey-red);
+  color: var(--black);
+          box-shadow: 0 0 10px 5px rgba(186, 186, 186, 0.25);
+}
+
+.accordion-button:focus {
+
+   box-shadow: 0 0 10px 5px rgba(186, 186, 186, 0.25);
+
+}
+#myTab .nav-link.active{
+background: var(--red1);
+color: var(--white);
+border-bottom: 1px solid var(--black);
+}
 .navbar .nav-link.active {
   color: var(--red1);
   border-bottom: 3px solid var(--red1);
@@ -153,7 +179,18 @@ footer h5 {
 .btn-success.rounded-circle {
   animation: pulse 2s infinite;
 }
-
+.footer-ujala-daily{
+  padding: 70px 10px 30px 10px;
+}
+.footer-ujala-daily a{
+color: var(--white);
+}
+.footer-ujala-daily a:hover{
+color: var(--red);
+}
+.footer-ujala-daily .bi:hover{
+color: var(--red);
+}
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
@@ -387,7 +424,26 @@ footer {
   background-color: var(--red1);
   color: white;
 }
-
+.offcanvas-button{
+  width: 100px;
+}
+  .header-main-ujala .offcanvas-start ,.header-main-ujala .offcanvas-button{
+display: none;
+}
+@media (max-width: 1024px) {
+.offcanvas-header{
+      align-items: flex-start;
+}
+.navbar-nav {
+  width: 90%;
+}
+  .header-main-ujala .navbar-toggler{
+display:none;
+}
+  .header-main-ujala .offcanvas-start ,.header-main-ujala .offcanvas-button{
+display: block;
+}
+}
 /* Responsive Media Queries */
 @media (max-width: 991px) {
   .navbar-nav {
@@ -399,7 +455,13 @@ footer {
   .section-title {
     font-size: 1.3rem;
   }
-  
+  .navbar-brand {
+    width: 230px;
+    margin: 0;
+}
+.navbar-brand .logo-header {
+    width: 100%;
+}
   .about-content p {
     font-size: 0.9rem;
   }

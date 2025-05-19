@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ujala Punjab - News Portal</title>
+  <title>Ujala Daily - News Portal</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
 </head>
 <body>
@@ -18,128 +19,175 @@
  
 
   <!-- Header Section -->
-  <header class="header-main-ujala ">
-    <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Follow Us Section -->
-      <div class="col-md-3 text-center">
-        <div class="follow-section">
-          <h6 class="mb-2">हमारी पहुंच</h6>
-          <div class="border-top border-bottom py-2">
-            <h5>Follow us</h5>
-            <div class="social-icons d-flex justify-content-center gap-2">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-   
-            </div>
-            <p class="mt-2 small">हम से जुड़े रहें</p>
-          </div>
-        </div>
-      </div>
+ <header>
+    <!-- Logo Area -->
+    <div class="header-main-ujala ">
+      <div class="container-xxl">
+        <nav class="navbar  navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="#"><img src="assets/images/logo/logo-main.png" class="logo-header"></a>
 
-      <!-- Center Logo Section -->
-      <div class="col-md-6 text-center">
-        <div class="logo-container">
-          <img src="https://placehold.co/300x100/ff3366/ffffff.png?text=सच+कहूँ" alt="Ujala Punjab Logo" class="img-fluid main-logo">
-          <p class="tagline">ਉਜਾਲਾ ਪੰਜਾਬ</p>
-        </div>
-      </div>
+          <button class="btn offcanvas-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> <img
+              src="assets/images/icon/menu.png" width="50"></button>
 
-      <!-- Right E-Paper Section -->
-      <div class="col-md-3">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h6>E-paper</h6>
-            <div class="epaper-image">
-              <img src="https://placehold.co/200x80/cccccc/666666.png?text=E-Paper" alt="E-paper" class="img-fluid">
+          <div class="offcanvas offcanvas-start" style="width: 40%;" data-bs-scroll="true" tabindex="-1"
+            id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+              <a class="navbar-brand" href="#"><img src="assets/images/logo/logo-main.png" class="logo-header"></a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+              <ul class="navbar-nav m-0">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Ujala Daily</h5>
+                <li class="nav-item">
+                  <a class="nav-link " href="index.html">HOME</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link active" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav m-0 mt-4">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Editions</h5>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CANADA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PUNJAB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">DELHI</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">UTTAR PRADESH</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">RAJASTHAN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">UTTARAKHAND</a>
+                </li>
+                <!-- HTML -->
+                <li class="nav-item dropdown hover-dropdown">
+                  <a class="nav-link" href="#" role="button">
+                    MORE
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="about.html">About US</a></li>
+                    <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                    <li><a class="dropdown-item" href="#">Business</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+
             </div>
           </div>
-          <div class="col-md-12 mt-2 text-center">
-            <div class="special-promo">
-              <img src="https://placehold.co/200x80/ffcc00/333333.png?text=Promotion" alt="Special Promotion" class="img-fluid">
+
+
+
+          <div class="main-header-2 ">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav1">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link " href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">CONTACT US</a>
+                </li>
+
+
+
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
             </div>
+
           </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- country Navigation -->
+    <nav class="navbar navbar1 navbar-expand-lg navbar-light bg-grey">
+      <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">CANADA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PUNJAB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DELHI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">UTTAR PRADESH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">RAJASTHAN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">UTTARAKHAND</a>
+            </li>
+            <!-- HTML -->
+            <li class="nav-item dropdown hover-dropdown">
+              <a class="nav-link" href="#" role="button">
+                MORE
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About US</a></li>
+                <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                <li><a class="dropdown-item" href="#">Business</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+        <div class="d-flex gap-3 ">
+          <a href="#" class="text-black fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-black fs-5"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-black fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-black fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
-    </div></div>
+    </nav>
+    <div class="news-header">
+      <div class="container-fluid p-0">
+        <div class="breaking-news">
+          <div class="breaking-news-label">BREAKING NEWS</div>
+          <marquee direction="left" loop="" scrollamount="5" class="d-flex align-items-center">
+            <div class="text-center">
+              <span>India's tariff: भारत के अमेरिका समेत कई देशों के लेकर ये बड़ा कदम उठाया</span>
+              <span>India's tariff: भारत के अमेरिका समेत कई देशों bi के लेकर ये बड़ा कदम उठाया</span>
+            </div>
+          </marquee>
+        </div>
   </header>
-  <!-- Navigation Menu -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3 sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-lg-none" href="#">Menu</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">देश</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">विदेश</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">राज्य</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">वेब स्पेशल</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-danger" href="#">FRAUD ALERT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">अपराध/वारदात</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">विचार/चर्चा</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">VIDEO GALLERY</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">स्वास्थ्य</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">शिक्षा / रोजगार</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              MORE
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">खेल</a></li>
-              <li><a class="dropdown-item" href="#">मनोरंजन</a></li>
-              <li><a class="dropdown-item" href="#">धर्म/ज्योतिष</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <button class="btn btn-outline-dark" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Breaking News Ticker -->
-  <div class="container mt-3">
-    <div class="breaking-news">
-      <div class="breaking-news-label">BREAKING NEWS</div>
-      <div class="ticker-wrapper">
-        <div class="ticker">
-          <span>India's tariff: भारत के अमेरिका समेत कई देशों के लेकर ये बड़ा कदम उठाया</span>
-          <span>मन की बात: प्रधानमंत्री नरेंद्र मोदी 30 जून को करेंगे 'मन की बात' की 111वीं कड़ी में संबोधित</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Main Content Area -->
   <main class="container mt-4 section-padding">
@@ -148,10 +196,10 @@
       <div class="col-lg-8">
         <h2 class="section-title">About us:</h2>
         <div class="about-content">
-          <p>Ujala Punjab (a unit of Sajiya Media Publication) is a daily newspaper from India that prints in Hindi and Punjabi. "Ujala Punjab," a Hindi newspaper, was launched on June 11th, 2002, and a Punjabi version on April 29th, 2003. Currently, the newspaper distributes in the five major states of Punjab, Haryana, Rajasthan, Delhi, Uttar Pradesh, Uttrakhand, and Chandigarh. The publication has a decent readership in those states.</p>
+          <p>Ujala Daily (a unit of Sajiya Media Publication) is a daily newspaper from India that prints in Hindi and Punjabi. "Ujala Daily," a Hindi newspaper, was launched on June 11th, 2002, and a Punjabi version on April 29th, 2003. Currently, the newspaper distributes in the five major states of Punjab, Haryana, Rajasthan, Delhi, Uttar Pradesh, Uttrakhand, and Chandigarh. The publication has a decent readership in those states.</p>
           
           <h3 class="subsection-title mt-4">We Cover:</h3>
-          <p>Ujala Punjab covers news from major categories including national and international, rural or village, business/startups, religion, sports, automobiles, technology, career and education for school, college, government jobs, general knowledge, column on exam preparation, health and fitness, women issues, lifestyle, Ayurveda, food, and travel, etc.</p>
+          <p>Ujala Daily covers news from major categories including national and international, rural or village, business/startups, religion, sports, automobiles, technology, career and education for school, college, government jobs, general knowledge, column on exam preparation, health and fitness, women issues, lifestyle, Ayurveda, food, and travel, etc.</p>
           
           <h3 class="subsection-title mt-4">Verification and Fact Check Policy:</h3>
           <p>The team keeps posting local and regional news updates sourced from field members and verified news agencies. Being a responsible media house publication, it keeps an eye on fake or hoax news and busts fake information with in-time updates on its digital media platform. Besides this publication, keeps organizing workshops in town and rural areas for media and news verification processes. Our team has trained staff under the Google News Initiative programme.</p>
@@ -160,7 +208,7 @@
           <p>Members of our editorial team come from diverse backgrounds and have extensive experience. Our publication adheres to established professional manuals and media ethics while gathering and disseminating news. The team works around the clock with an unbiased approach. As a result, we strive to provide readers with accurate and timely news that not only raises awareness but also inspires them to address societal issues. Currently, under the guidance of Web Editor Pawan Kumar, our team is working hard to serve our loyal and growing readership.</p>
           
           <h3 class="subsection-title mt-4">Network:</h3>
-          <p>The publication's registered office is in Noida (UP), and the head office is in Sirsa (Haryana). Bureau (news collection offices) in Indian cities include Noida, Mumbai, Dehradun, Lucknow, Patiala, Bathinda, Sangaria, Sirsa, and Chandigarh. A team of 400+ reporters, 60k+ freelancers, and 30,00+ newspaper hawkers enabled the publication to secure a decent position among national publishers. Today, Ujala Punjab enjoys growing readership across digital, social, and print media.</p>
+          <p>The publication's registered office is in Noida (UP), and the head office is in Sirsa (Haryana). Bureau (news collection offices) in Indian cities include Noida, Mumbai, Dehradun, Lucknow, Patiala, Bathinda, Sangaria, Sirsa, and Chandigarh. A team of 400+ reporters, 60k+ freelancers, and 30,00+ newspaper hawkers enabled the publication to secure a decent position among national publishers. Today, Ujala Daily enjoys growing readership across digital, social, and print media.</p>
           
           <h3 class="subsection-title mt-4">Empanelment and Member:</h3>
           <p>The publication (a newspaper) is on the list of government and reputed media bodies.</p>
@@ -278,76 +326,66 @@
   </main>
 
   <!-- Footer Section -->
-  <footer class="mt-5 bg-dark text-white py-4">
+ <footer class="bg-dark text-white footer-ujala-daily">
     <div class="container">
-      <div class="row">
-        <!-- Footer Logo -->
-        <div class="col-md-3 mb-3">
-          <div class="footer-logo text-center">
-            <img src="https://placehold.co/200x80/ff3366/ffffff.png?text=सच+कहूँ" alt="Ujala Punjab Logo" class="img-fluid mb-3">
-            <p class="small">ਉਜਾਲਾ ਪੰਜਾਬ ਨਿਊਜ਼ ਪੋਰਟਲ ਭਾਰਤੀ ਪੱਤਰਕਾਰੀ ਦੇ ਮੂਲ ਸਿਧਾਂਤ "ਸੱਤਯਮੇਵ ਜਯਤੇ" ਨੂੰ ਸਮਰਪਿਤ ਹੈ। ਅਸੀਂ ਨਿਊਜ਼ ਮੀਡੀਆ ਰਾਹੀਂ ਮੌਜੂਦਾ ਸਮਾਜ ਨੂੰ ਸੱਚੀਆਂ ਅਤੇ ਨਿਰਪੱਖ ਖ਼ਬਰਾਂ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਾਂ।</p>
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-4">
+          <div class="footer-logo">
+            <img src="assets/images/logo/logo-main-white.png">
           </div>
-          <div class="social-icons text-center mt-2">
-            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          <p>Mauris ut enim sit amet lacus ornare ullamcor. Praesent placerat nequ puru rhoncu tincidunt odio ultrices.
+            Sed feugiat feugiat felis.
+
+          </p>
+
+        </div>
+
+        <div class="col-12 col-md-2">
+          <h5 class=" footer-heading pb-2 mb-3">EDITIONS</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Haryana</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Punjab</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Delhi</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Rajasthan</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Uttar Pradesh</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Uttarakhand</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-2">
+          <h5 class=" footer-heading pb-2 mb-3">COMPANY</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none text-white active">Home</a></li>
+
+            <li class="mb-2"><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
+            <li class="mb-2"><a href="contact-us.html" class="text-decoration-none text-white">Contact Us</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Careers</a></li>
+
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Terms &amp; Conditions</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <h5 class=" footer-heading pb-2 mb-3">CONNECT WITH US</h5>
+          <div class="d-flex gap-3 mb-3">
+            <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
           </div>
-        </div>
-        
-        <!-- Quick Links -->
-        <div class="col-md-3 mb-3">
-          <h5 class="footer-heading">QUICK LINKS</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">English Version</a></li>
-            <li><a href="#">Hindi Version (हिन्दी)</a></li>
-            <li><a href="#">Work with Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Categories -->
-        <div class="col-md-3 mb-3">
-          <h5 class="footer-heading">CATEGORIES</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="#">खबरें</a></li>
-            <li><a href="#">धर्म</a></li>
-            <li><a href="#">खेल</a></li>
-          </ul>
-        </div>
-        
-        <!-- States -->
-        <div class="col-md-3 mb-3">
-          <h5 class="footer-heading">राज्य</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="#">हरियाणा</a></li>
-            <li><a href="#">पंजाब</a></li>
-            <li><a href="#">राजस्थान</a></li>
-            <li><a href="#">दिल्ली</a></li>
-            <li><a href="#">हिमाचल</a></li>
-          </ul>
+          <p class="small">Subscribe to our newsletter</p>
+          <div class="input-group">
+            <input type="email" class="form-control form-control-sm" placeholder="Your email">
+            <button class="btn btn-danger btn-sm">Subscribe</button>
+          </div>
         </div>
       </div>
-      
-      <!-- Copyright Section -->
-      <div class="mt-4 pt-3 border-top">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="small mb-0">© COPYRIGHT 2025 Ujala Punjab</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <ul class="list-inline mb-0 small">
-              <li class="list-inline-item"><a href="#">Contact Us</a></li>
-              <li class="list-inline-item">|</li>
-              <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
-              <li class="list-inline-item">|</li>
-              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </div>
+
+      <div class="border-top mt-4 pt-4 d-flex justify-content-between">
+        <p class="small mb-0">© 2025 Ujala Daily. All Rights Reserved. /p>
+
+        <p class="small mb-0">Designed By: <a href="https://akaalwebsoft.com/">Akaal Websoft Pvt. Ltd.</a></p>
       </div>
     </div>
   </footer>
