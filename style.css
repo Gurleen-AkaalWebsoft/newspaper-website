@@ -56,8 +56,10 @@ justify-content: center;
 gap: 5px;
 color: var(--white);
 transform: translateX(118px);
-margin-bottom:100px ;
+margin-bottom:60px ;
 font-size: 22px;
+z-index: 777;
+
 }
 .whatsapp-logo-fixed p{
     font-size: 18px;
@@ -70,7 +72,7 @@ transition: all 1s
   background-color: #25D366;
 }
 .heading-hero-main{
-    font-size: 64px;
+    font-size: 44px;
     font-weight: 900;
     padding: 20px 0;
  
@@ -209,12 +211,29 @@ color: var(--red);
   display: block;
   margin-top: 0; }
 
-
+.navbar-nav.mx-auto.gap-4{
+  padding-left: 100px;
+}
 /* AboutUs  */
 .social-icon .fa-brands{
 color: bisque;
 }
 
+ .Advertisement-banner .swiper-slide{
+        display: flex
+;
+    justify-content: center;
+
+  }
+  
+ .Advertisement-banner .swiper-wrapper{
+  padding: 20px 0px;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, -5px);}
+ .Advertisement-banner .swiper-pagination-bullet-active{
+ background-color: var(--red1) !important; 
+}
 .header {
   transition: all 1s ease;
   z-index: 1000;
@@ -276,7 +295,15 @@ color: bisque;
 .main-logo {
   max-height: 80px;
 }
+.cards-news{
+  background-color: var(--light-cream);
+}
+.cards-container-main-newspaper{
 
+      display: grid;
+gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
 .tagline {
   font-size: 1.2rem;
   font-weight: bold;
@@ -497,6 +524,11 @@ footer {
 display: none;
 }
 @media (max-width: 1024px) {
+  .navbar-nav.mx-auto.gap-4{
+  padding-left: 00px;
+  margin: 0px !important;
+  gap: 0 !important;
+}
 .offcanvas-header{
       align-items: flex-start;
 }
