@@ -230,7 +230,7 @@ color: bisque;
   padding: 20px 0px;
 }
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, -5px);}
+    bottom: var(--swiper-pagination-bottom, -5px) !important; }
  .Advertisement-banner .swiper-pagination-bullet-active{
  background-color: var(--red1) !important; 
 }
