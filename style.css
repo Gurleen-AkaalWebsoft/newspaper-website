@@ -10,6 +10,7 @@
 --black: #181818;
 --grey-red:#ff55552e;
 --light-cream:#ffeaea66;
+--cream:#FBF3F4;
 }
 .font-heading1{
     font-family: var(--font1);
@@ -125,8 +126,8 @@ background: var(--red1);
 color: var(--white);
 }
 .navbar .nav-link.active {
-  color: var(--red1);
-  border-bottom: 3px solid var(--red1);
+  color: var(--black);
+  /* border-bottom: 3px solid var(--red1); */
 }
 
 .navbar .nav-link:hover {
@@ -188,10 +189,10 @@ footer h5 {
 color: var(--white);
 }
 .footer-ujala-daily a:hover{
-color: var(--red);
+color: var(--red1);
 }
 .footer-ujala-daily .bi:hover{
-color: var(--red);
+color: var(--red1);
 }
 @keyframes pulse {
   0% {
@@ -205,7 +206,9 @@ color: var(--red);
   }
 }
 
-
+.footer-ujala-daily .col-12.col-md-4 p{
+display: none;
+}
 
 .hover-dropdown:hover > .dropdown-menu {
   display: block;
@@ -550,6 +553,20 @@ display: block;
 }
 
 @media (max-width: 767px) {
+  .Advertisement-banner .swiper-slide{
+        width: 100% !important;
+height: auto;
+
+justify-content: center;
+  }
+  .cards-container-main-newspaper {
+
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+  .Advertisement-banner .swiper-slide img{
+    width: 100% !important;
+  }
   .section-title {
     font-size: 1.3rem;
   }
@@ -557,9 +574,7 @@ display: block;
     width: 230px;
     margin: 0;
 }
-.navbar-brand .logo-header {
-    width: 100%;
-}
+
   .about-content p {
     font-size: 0.9rem;
   }
