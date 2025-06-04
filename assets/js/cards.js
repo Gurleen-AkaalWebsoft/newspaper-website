@@ -136,26 +136,166 @@ const arrayData = [
         Heading: "PUNJABI",
         Edition:"30/05/2025"
     },
+     {  id: 23,
+         imageUrl: "/assets/images/news/31-05-25.png",
+         pdf:"/assets/pdf/31-05-2025.pdf",
+        Heading: "PUNJABI",
+        Edition:"31/05/2025"
+    },
+    {  id: 24,
+         imageUrl: "/assets/images/news/01-06-25.png",
+         pdf:"/assets/pdf/01-06-2025.pdf",
+        Heading: "PUNJABI",
+        Edition:"01/06/2025"
+    },
+   
+     {  id: 25,
+         imageUrl: "/assets/images/news/03-06-2025.png",
+         pdf:"/assets/pdf/03-06-2025.pdf",
+        Heading: "PUNJABI",
+        Edition:"03/06/2025"
+    },
+      {  id: 26,
+         imageUrl: "/assets/images/news/04-06-2025.png",
+         pdf:"/assets/pdf/04-06-2025.pdf",
+        Heading: "PUNJABI",
+        Edition:"04/06/2025"
+    },
 ]
 
-const cardContainer = document.querySelector('.cards-container-main-newspaper');
+  const cardContainer = document.querySelector('.cards-container-main-newspaper');
 
-const functionCards = () => {
+  const functionCards = () => {
+    // Clear existing content
+    cardContainer.innerHTML = '';
+
     // Reverse the array before rendering
     const reversedData = [...arrayData].reverse();
 
-    reversedData.map((data) => {
-        cardContainer.innerHTML += `<a href="${data.pdf}" class="text-decoration-none" target="_blank">
-        <div class="cardd">
+    // Loop and generate cards
+    reversedData.forEach((data, index) => {
+      cardContainer.innerHTML += `
+        <div class="card-wrapper" data-bs-toggle="modal" data-bs-target="#pdfModal" data-pdf="${data.pdf}">
+          <div class="cardd">
             <div class="image">
-                <img src="${data.imageUrl}" class="card-img-top">
+              <img src="${data.imageUrl}" class="card-img-top" alt="${data.Heading}">
             </div>
             <div class="card-footer text-black text-center py-3">
-                <h5 class="card-title fw-bold mb-0">${data.Heading}</h5>
-                <p class="card-text small">${data.Edition}</p>
+              <h5 class="card-title fw-bold mb-0">${data.Heading}</h5>
+              <p class="card-text small">${data.Edition}</p>
             </div>
-        </div></a>`;
+          </div>
+        </div>`;
     });
-};
+  };
 
-functionCards();
+  // Handle click to load PDF into modal
+  document.addEventListener("click", function (e) {
+    const card = e.target.closest(".card-wrapper");
+    if (card) {
+      const pdfUrl = card.getAttribute("data-pdf");
+      document.getElementById("pdfViewer").src = pdfUrl;
+    }
+  });
+  // For small Devices
+let currentPdfUrl = "";
+
+document.addEventListener("click", function (e) {
+  const card = e.target.closest(".card-wrapper");
+  if (!card) return;
+
+  currentPdfUrl = card.getAttribute("data-pdf");
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    // Show modal and allow button to open PDF
+    const modalEl = document.getElementById("pdfModal");
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
+
+    // Optionally don't load iframe on mobile to save performance
+    document.getElementById("pdfViewer").style.display = "none";
+  } else {
+    document.getElementById("pdfViewer").style.display = "block";
+    document.getElementById("pdfViewer").src = currentPdfUrl;
+
+    const modalEl = document.getElementById("pdfModal");
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("mobilePdfBtn");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      if (currentPdfUrl) {
+        window.open(currentPdfUrl, "_blank");
+      } else {
+        alert("No PDF available");
+      }
+    });
+  }
+});
+
+
+  // Function for Search Bar
+  functionCards();
+function normalizeText(text) {
+    return text
+        .replace(/[\s\/-]+/g, '')    // Remove spaces, slashes, dashes
+        .toUpperCase()               // Convert to uppercase
+          // Normalize "VOLUME" to "VOL"
+}
+
+function mySearch() {
+    var input = document.getElementById("myInput");
+    var filter = normalizeText(input.value);
+
+      var magazineCards = document.querySelectorAll(".cardd");
+      var magazineCards = document.querySelectorAll(".card-wrapper");
+    var noResultsMessage = document.getElementById("noResultsMessage");
+
+    var advertisementBanner = document.querySelector(".Advertisement-banner");
+    if (advertisementBanner) {
+        advertisementBanner.style.display = "none";
+    }
+
+    var results = [];
+
+    magazineCards.forEach(function (card) {
+        var titleElement = card.querySelector("h5");
+        var dateElement = card.querySelector(".date");
+        var dateElement = card.querySelector("p");
+
+        var titleText = titleElement ? titleElement.textContent || titleElement.innerText : "";
+        var dateText = dateElement ? dateElement.textContent || dateElement.innerText : "";
+
+        var combinedText = normalizeText(titleText + " " + dateText);
+
+        var matchIndex = combinedText.indexOf(filter);
+
+        if (matchIndex > -1) {
+            results.push({ card: card, index: matchIndex });
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    // Sort results by match index (lower index = earlier match = higher priority)
+    results.sort((a, b) => a.index - b.index);
+
+    // Reorder in DOM
+    var container = magazineCards[0]?.parentNode;
+    if (container) {
+        results.forEach(result => container.appendChild(result.card));
+    }
+
+    // Show/hide no results message
+    if (results.length === 0 && filter !== "") {
+        noResultsMessage.style.display = "block";
+    } else {
+        noResultsMessage.style.display = "none";
+    }
+}

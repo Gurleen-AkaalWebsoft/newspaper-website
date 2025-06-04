@@ -102,7 +102,7 @@
 
               </ul>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <input onkeyup="mySearch()" id="myInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-success" type="submit">Search</button>
               </form>
             </div>
@@ -159,7 +159,7 @@
       </div>
     </div>
   </div>
-
+ 
 
   <div class="Advertisement-banner p-2">
     <div class="swiper">
@@ -186,86 +186,42 @@
     </div><!-- /.container -->
   </div>
   <!-- Editions Section -->
-   <section class="cards-news p-3">
-  <div class="container  wow animated fadeInUp " data-wow-delay="0.5s" data-wow-duration="1000ms">
-    <div class=" text-center">
+<section class="cards-news p-3">
+  <div class="container wow animated fadeInUp" data-wow-delay="0.5s" data-wow-duration="1000ms">
+    <div class="text-center">
       <h2 class="heading-hero-main font-heading1">Our Editions</h2>
     </div>
-
-    <div class="cards-container-main-newspaper">
-
-    </div>
+<div id="noResultsMessage" class="text-center" style="padding: 30px 10px; display:none; color: red; font-weight: bold;">
+                No content found.
+            </div>
+    <!-- Cards will be rendered here -->
+    <div class="cards-container-main-newspaper"></div>
   </div>
 </section>
-  <!-- Divider -->
 
-  <section class="section-padding wow animated fadeInUp d-none" data-wow-delay="0.5s" data-wow-duration="1000ms"">
-  <div class=" container">
-    <div class="row">
-      <div class="col-12">
-        <div class=" text-center">
-          <h2 class="heading-hero-main font-heading1">FAQ's</h2>
-        </div>
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne">
-                Accordion Item #1
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo">
-                Accordion Item #2
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree">
-                Accordion Item #3
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
+<!-- modal OUTSIDE the container used for dynamic cards -->
+<div class="modal fade modal-xl" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <!-- iframe for desktop -->
+        <iframe id="pdfViewer" src="" width="100%" height="600px" frameborder="0" class="d-none d-sm-block"></iframe>
+
+        <!-- Button for small screen -->
+        <div class="text-center d-block d-sm-none p-2">
+          <button id="mobilePdfBtn" class="btn btn-success">Open PDF</button>
         </div>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</div>
+
+  <!-- Divider -->
+
 
 
   <!-- Footer -->
@@ -341,6 +297,8 @@
   </div>
 
 
+
+</script>
   <script src="assets/js/cards.js"></script>
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>

@@ -574,6 +574,13 @@ justify-content: center;
     width: 230px;
     margin: 0;
 }
+[id="pdfModal"]{
+  display: none;
+}
+.modal-fullscreen-sm-down{
+  height: auto !important;
+        
+}
 
   .about-content p {
     font-size: 0.9rem;
